@@ -4,4 +4,16 @@
 # A = 3; B = 5 -> 243 (3⁵)
 # A = 2; B = 3 -> 8
 
-print('hello 26')
+print()
+x = int(input("Введите число A: "))
+y = int(input("Введите число B: "))
+print()
+
+def power(x, y):
+    if y > 0:
+        return x * power(x, y-1)
+    else:
+        return 1
+
+print('Число', x, 'возведенное в степень', y, 'равно: ', power(x, y))
+print()
